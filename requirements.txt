@@ -1,2 +1,6 @@
 pytube
 os
+pydub
+moviepy
+Pygame
+keyboard
