@@ -1,18 +1,21 @@
-import subprocess
+from tqdm import tqdm  # Importez tqdm
 
+# Exemple de deux listes de même taille
+liste1 = ["Piste 1", "Piste 2", "Piste 3"]
+liste2 = ["Artiste 1", "Artiste 2", "Artiste 3"]
 
-def lire_fichier_mp4_avec_vlc(chemin):
-    try:
-        # Spécifier le chemin complet de l'exécutable VLC
-        chemin_vlc = "D:/Application/VLC/vlc.exe"
+# Créez une barre de chargement avec tqdm
+with tqdm(total=len(liste1)) as pbar:
+    # Parcourez les deux listes simultanément
+    for piste, artiste in zip(liste1, liste2):
+        # Traitez les éléments de la liste ici
+        # Dans cet exemple, nous simulons un traitement en attente
+        import time
 
-        # Exécuter VLC avec le chemin du fichier MP4 en argument
-        subprocess.Popen([chemin_vlc, chemin])
-        print("Lecture du fichier MP4 en cours...")
-    except FileNotFoundError:
-        print("Erreur: VLC n'est pas installé sur votre système.")
+        time.sleep(0.5)
 
+        # Mettez à jour la barre de chargement
+        pbar.update(1)
 
-# Exemple d'utilisation de la fonction
-chemin_fichier_mp4 = 'D:\Titou\Musique\Techno\Ivy.mp4'
-lire_fichier_mp4_avec_vlc(chemin_fichier_mp4)
+# Affichez un message une fois la boucle terminée
+print("Boucle terminée !")

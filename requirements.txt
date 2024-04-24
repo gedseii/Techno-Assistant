@@ -4,3 +4,5 @@ pydub
 moviepy
 Pygame
 keyboard
+beautifulsoup4
+spotify
