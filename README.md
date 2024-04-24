@@ -6,6 +6,7 @@ Techno Assistant est un programme Python qui vous permet de télécharger facile
 ## Fonctionnalités
 - Recherche de vidéos YouTube basée sur un mot-clé.
 - Téléchargement de l'audio de la première vidéo trouvée au format MP3.
+- Téléchargement de playlist Spotify
 - Interface conviviale en ligne de commande.
 
 ## Prérequis
